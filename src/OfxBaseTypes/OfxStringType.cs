@@ -5,12 +5,9 @@ public abstract record OfxStringType : IXmlSerializable
     protected string _backingField;
     
     protected OfxStringType() { _backingField = string.Empty; }
-    protected OfxStringType(string value) { _backingField = value; }
     
-    public override string ToString() => _backingField;
-
     private static readonly StringTypeXmlConverter Converter = new();
-
+    
     public System.Xml.Schema.XmlSchema? GetSchema() => null;
 
     public void ReadXml(System.Xml.XmlReader reader)
@@ -22,4 +19,6 @@ public abstract record OfxStringType : IXmlSerializable
     {
         Converter.Write(writer, _backingField);
     }
+    
+    public override string ToString() => _backingField;
 }

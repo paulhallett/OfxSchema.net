@@ -2,13 +2,13 @@
 
 namespace OfxSchema;
 
-public record OfxErrorType : OfxStringType
+public record OfxErrorType : OfxIntegerType
 {
     // <xsd:simpleType name="ErrorType">
     //     <xsd:annotation>
     //         <xsd:documentation>
     //               The OFX element "ERROR" is of type "ErrorType"
-    //             </xsd:documentation>
+    //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:restriction base="xsd:string">
     //         <xsd:minLength value="1" />
@@ -18,10 +18,11 @@ public record OfxErrorType : OfxStringType
     //     </xsd:restriction>
     // </xsd:simpleType>    
     
-    public static implicit operator OfxErrorType(string value) => new(value);
-
+    public static implicit operator OfxErrorType(int value) => new(value);
+    public static implicit operator int(OfxErrorType value) => value._backingField;
+    
     public OfxErrorType() { }
-    private OfxErrorType(string value)
+    private OfxErrorType(int value)
     {
         _backingField = value;
     }

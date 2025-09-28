@@ -2,7 +2,7 @@ namespace OfxSchema;
 
 public abstract record OfxIntegerType : IXmlSerializable
 {
-    private int _backingField;
+    protected int _backingField;
     
     protected OfxIntegerType() { _backingField = 0; }
     

@@ -28,7 +28,6 @@ public class StringTypeXmlConverter : XmlConverter<string>
         writer.WriteString(value);
     }
 }
-
 public class IntegerTypeXmlConverter : XmlConverter<int>
 {
     public override int Read(System.Xml.XmlReader reader, Type typeToConvert)
@@ -47,6 +46,28 @@ public class IntegerTypeXmlConverter : XmlConverter<int>
     }
 
     public override void Write(System.Xml.XmlWriter writer, int value)
+    {
+        writer.WriteValue(value);
+    }
+}
+public class DecimalTypeXmlConverter : XmlConverter<decimal>
+{
+    public override decimal Read(System.Xml.XmlReader reader, Type typeToConvert)
+    {
+        if (reader.IsEmptyElement)
+        {
+            reader.ReadStartElement();
+            return 0;
+        }
+        
+        reader.ReadStartElement();
+        var value = reader.ReadContentAsDecimal();
+        reader.ReadEndElement();
+        
+        return value;
+    }
+
+    public override void Write(System.Xml.XmlWriter writer, decimal value)
     {
         writer.WriteValue(value);
     }

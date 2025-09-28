@@ -31,7 +31,7 @@ public record OfxDateTimeType : IXmlSerializable
 
     public void ReadXml(System.Xml.XmlReader reader)
     {
-        var value = Converter.Read(reader, typeof(string)) ?? throw new Exception("Invalid date");
+        var value = Converter.Read(reader, typeof(string)) ?? throw new Exception("Invalid string value");
         FromString(value);
     }
 
@@ -58,4 +58,9 @@ public record OfxDateTimeType : IXmlSerializable
 
     private const string BASIC_FORMAT = "yyyyMMdd";
     private const string TIMESTAMP_FORMAT = "yyyyMMddhhmmss";
+    
+    //TODO: Parsers for the below other allowed format strings
+    private const string OTHER_FORMAT1 = "YYYYMMDDhhmmss.SSS";
+    private const string OTHER_FORMAT2 = "YYYYMMDDhhmmss.SSS[+hh:mm]";
+    private const string OTHER_FORMAT3 = "YYYYMMDDhhmmss.SSS[UTC]";
 }
