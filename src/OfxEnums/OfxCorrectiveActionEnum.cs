@@ -2,23 +2,21 @@
 
 namespace OfxSchema;
 
-public enum OfxSeverityEnum
+public enum OfxCorrectiveActionEnum
 {
-    // <xsd:simpleType name="SeverityEnum">
+    // <xsd:simpleType name="CorrectiveActionEnum">
     //     <xsd:annotation>
     //         <xsd:documentation>
-    //               The OFX element "SEVERITYENUM" is of type "SeverityEnum"
+    //               The OFX element "CORRECTIVEACTENUM" is of type "CorrectiveActionEnum"
     //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:restriction base="xsd:string">
     //         <xsd:whiteSpace value="collapse" />
-    //         <xsd:enumeration value="INFO" />
-    //         <xsd:enumeration value="WARN" />
-    //         <xsd:enumeration value="ERROR" />
+    //         <xsd:enumeration value="REPLACE" />
+    //         <xsd:enumeration value="DELETE" />
     //     </xsd:restriction>
     // </xsd:simpleType>    
     
-    INFO,
-    WARN,
-    ERROR,
+    REPLACE,
+    DELETE,
 }

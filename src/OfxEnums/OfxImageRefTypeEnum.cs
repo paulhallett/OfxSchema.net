@@ -2,23 +2,23 @@
 
 namespace OfxSchema;
 
-public enum OfxSeverityEnum
+public enum OfxImageRefTypeEnum
 {
-    // <xsd:simpleType name="SeverityEnum">
+    // <xsd:simpleType name="ImageRefTypeEnum">
     //     <xsd:annotation>
     //         <xsd:documentation>
-    //               The OFX element "SEVERITYENUM" is of type "SeverityEnum"
+    //               The OFX element "IMAGEREFTYPE" is of type "ImageTypeEnum"
     //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:restriction base="xsd:string">
     //         <xsd:whiteSpace value="collapse" />
-    //         <xsd:enumeration value="INFO" />
-    //         <xsd:enumeration value="WARN" />
-    //         <xsd:enumeration value="ERROR" />
+    //         <xsd:enumeration value="OPAQUE" />
+    //         <xsd:enumeration value="URL" />
+    //         <xsd:enumeration value="FORMURL" />
     //     </xsd:restriction>
     // </xsd:simpleType>    
     
-    INFO,
-    WARN,
-    ERROR,
+    OPAQUE,
+    URL,
+    FORMURL,
 }

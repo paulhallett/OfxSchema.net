@@ -2,16 +2,16 @@
 
 namespace OfxSchema;
 
-public record OfxLedgerBalance
+public record OfxPendingTransactionList
 {
-    // <xsd:complexType name="LedgerBalance">
+    // <xsd:complexType name="PendingTransactionList">
     //     <xsd:annotation>
     //         <xsd:documentation>
-    //               The OFX element "LEDGERBAL" is of type "LedgerBalance"
+    //               The OFX element "BANKTRANLISTP" is of type "PendingTransactionList"
     //         </xsd:documentation>
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("BALAMT")]                       public required OfxAmountType BALAMT { get; set; }
     [XmlElement("DTASOF")]                       public required OfxDateTimeType DTASOF { get; set; }
+    [XmlElement("STMTTRNP")]                     public OfxPendingTransaction? STMTTRNP { get; set; }
 }
