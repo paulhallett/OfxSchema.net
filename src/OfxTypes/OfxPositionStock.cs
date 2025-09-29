@@ -15,4 +15,6 @@ public record OfxPositionStock : OfxAbstractPositionBase
     [XmlElement("UNITSSTREET")]                  public OfxPositiveQuantityType? UNITSSTREET { get; set; }
     [XmlElement("UNITSUSER")]                    public OfxPositiveQuantityType? UNITSUSER { get; set; }
     [XmlElement("REINVDIV")]                     public OfxBooleanType? REINVDIV { get; set; }
+    
+    public virtual bool ShouldSerializeREINVDIV() => REINVDIV.HasValue;
 }

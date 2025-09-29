@@ -22,4 +22,7 @@ public record OfxIncome : OfxAbstractInvestmentTransaction
     [XmlElement("CURRENCY")]                     public OfxCurrency? CURRENCY { get; set; }
     [XmlElement("ORIGCURRENCY")]                 public OfxCurrency? ORIGCURRENCY { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
+    
+    public virtual bool ShouldSerializeTAXEXEMPT() => TAXEXEMPT.HasValue;
+    public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
 }

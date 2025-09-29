@@ -17,4 +17,7 @@ public record OfxSellOption : OfxAbstractInvestmentSellTransaction
     [XmlElement("RELFITID")]                     public OfxFinancialInstitutionTransactionIdType? RELFITID { get; set; }
     [XmlElement("RELTYPE")]                      public OfxRelatedEnum? RELTYPE { get; set; }
     [XmlElement("SECURED")]                      public OfxSecuredEnum? SECURED { get; set; }
+    
+    public virtual bool ShouldSerializeRELTYPE() => RELTYPE.HasValue;
+    public virtual bool ShouldSerializeSECURED() => SECURED.HasValue;
 }

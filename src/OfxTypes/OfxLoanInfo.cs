@@ -27,4 +27,6 @@ public record OfxLoanInfo
     [XmlElement("LOANTOTALPROJINTEREST")]        public OfxAmountType? LOANTOTALPROJINTEREST { get; set; }
     [XmlElement("LOANINTERESTTODATE")]           public OfxAmountType? LOANINTERESTTODATE { get; set; }
     [XmlElement("LOANNEXTPMTDATE")]              public OfxDateTimeType? LOANNEXTPMTDATE { get; set; }
+    
+    public virtual bool ShouldSerializeLOANPMTFREQ() => LOANPMTFREQ.HasValue;
 }

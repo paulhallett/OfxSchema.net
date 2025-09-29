@@ -23,4 +23,6 @@ public record OfxInvestmentPosition
     [XmlElement("CURRENCY")]                     public OfxCurrency? CURRENCY { get; set; }
     [XmlElement("MEMO")]                         public OfxMessageType? MEMO { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
+    
+    public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
 }

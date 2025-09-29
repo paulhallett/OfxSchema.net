@@ -17,4 +17,7 @@ public record OfxStockInfo : OfxAbstractSecurityInfo
     [XmlElement("DTYIELDASOF")]                  public OfxDateTimeType? DTYIELDASOF { get; set; }
     [XmlElement("ASSETCLASS")]                   public OfxAssetClassEnum? ASSETCLASS { get; set; }
     [XmlElement("FIASSETCLASS")]                 public OfxGenericNameType? FIASSETCLASS { get; set; }
+    
+    public virtual bool ShouldSerializeSTOCKTYPE() => STOCKTYPE.HasValue;
+    public virtual bool ShouldSerializeASSETCLASS() => ASSETCLASS.HasValue;
 }

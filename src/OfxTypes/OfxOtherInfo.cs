@@ -15,4 +15,6 @@ public record OfxOtherInfo : OfxAbstractSecurityInfo
     [XmlElement("TYPEDESC")]                     public OfxTypeDescriptionType? TYPEDESC { get; set; }
     [XmlElement("ASSETCLASS")]                   public OfxAssetClassEnum? ASSETCLASS { get; set; }
     [XmlElement("FIASSETCLASS")]                 public OfxGenericNameType? FIASSETCLASS { get; set; }
+    
+    public virtual bool ShouldSerializeASSETCLASS() => ASSETCLASS.HasValue;
 }

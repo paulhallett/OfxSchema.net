@@ -17,4 +17,6 @@ public record OfxMutualFundInfo : OfxAbstractSecurityInfo
     [XmlElement("DTYIELDASOF")]                  public OfxDateTimeType? DTYIELDASOF { get; set; }
     [XmlElement("MFASSETCLASS")]                 public OfxMutualFundAssetClass? MFASSETCLASS { get; set; }
     [XmlElement("FIMFASSETCLASS")]               public OfxFinancialInstitutionMutualFundAssetClass? FIMFASSETCLASS { get; set; }
+    
+    public virtual bool ShouldSerializeMFTYPE() => MFTYPE.HasValue;
 }

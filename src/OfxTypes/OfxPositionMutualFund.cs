@@ -16,4 +16,7 @@ public record OfxPositionMutualFund : OfxAbstractPositionBase
     [XmlElement("UNITSUSER")]                    public OfxPositiveQuantityType? UNITSUSER { get; set; }
     [XmlElement("REINVDIV")]                     public OfxBooleanType? REINVDIV { get; set; }
     [XmlElement("REINVCG")]                      public OfxBooleanType? REINVCG { get; set; }
+    
+    public virtual bool ShouldSerializeREINVDIV() => REINVDIV.HasValue;
+    public virtual bool ShouldSerializeREINVCG() => REINVCG.HasValue;
 }

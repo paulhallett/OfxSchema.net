@@ -19,4 +19,6 @@ public record OfxOptionInfo : OfxAbstractSecurityInfo
     [XmlElement("SECID")]                        public OfxSecurityId? SECID { get; set; }
     [XmlElement("ASSETCLASS")]                   public OfxAssetClassEnum? ASSETCLASS { get; set; }
     [XmlElement("FIASSETCLASS")]                 public OfxGenericNameType? FIASSETCLASS { get; set; }
+    
+    public virtual bool ShouldSerializeASSETCLASS() => ASSETCLASS.HasValue;
 }

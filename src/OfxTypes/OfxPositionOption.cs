@@ -13,4 +13,6 @@ public record OfxPositionOption : OfxAbstractPositionBase
     // </xsd:complexType>
     
     [XmlElement("SECURED")]                      public OfxSecuredEnum? SECURED { get; set; }
+    
+    public virtual bool ShouldSerializeSECURED() => SECURED.HasValue;
 }

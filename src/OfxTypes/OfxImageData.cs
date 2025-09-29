@@ -19,4 +19,6 @@ public record OfxImageData
     [XmlElement("DTIMAGEAVAIL")]                 public required OfxDateTimeType DTIMAGEAVAIL { get; set; }
     [XmlElement("IMAGETTL")]                     public OfxImageTotalType? IMAGETTL { get; set; }
     [XmlElement("CHECKSUP")]                     public OfxCheckSupportEnum? CHECKSUP { get; set; }
+    
+    public virtual bool ShouldSerializeCHECKSUP() => CHECKSUP.HasValue;
 }

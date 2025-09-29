@@ -32,4 +32,7 @@ public record OfxInvestmentSell : OfxAbstractInvestmentTransaction
     [XmlElement("STATEWITHHOLDING")]             public OfxPositiveAmountType? STATEWITHHOLDING { get; set; }
     [XmlElement("PENALTY")]                      public OfxPositiveAmountType? PENALTY { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
+    
+    public virtual bool ShouldSerializeTAXEXEMPT() => TAXEXEMPT.HasValue;
+    public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
 }

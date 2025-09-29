@@ -22,4 +22,6 @@ public record OfxTransfer : OfxAbstractInvestmentTransaction
     [XmlElement("UNITPRICE")]                    public OfxUnitPriceType? UNITPRICE { get; set; }
     [XmlElement("DTPURCHASE")]                   public OfxDateTimeType? DTPURCHASE { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
+    
+    public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
 }

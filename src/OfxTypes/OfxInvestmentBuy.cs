@@ -31,4 +31,7 @@ public record OfxInvestmentBuy : OfxAbstractInvestmentTransaction
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
     [XmlElement("DTPAYROLL")]                    public OfxDateTimeType? DTPAYROLL { get; set; }
     [XmlElement("PRIORYEARCONTRIB")]             public OfxBooleanType? PRIORYEARCONTRIB { get; set; }
+    
+    public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
+    public virtual bool ShouldSerializePRIORYEARCONTRIB() => PRIORYEARCONTRIB.HasValue;
 }

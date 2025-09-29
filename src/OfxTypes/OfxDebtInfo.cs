@@ -26,4 +26,9 @@ public record OfxDebtInfo : OfxAbstractSecurityInfo
     [XmlElement("DTMAT")]                        public OfxDateTimeType? DTMAT { get; set; }
     [XmlElement("ASSETCLASS")]                   public OfxAssetClassEnum? ASSETCLASS { get; set; }
     [XmlElement("FIASSETCLASS")]                 public OfxGenericNameType? FIASSETCLASS { get; set; }
+    
+    public virtual bool ShouldSerializeDEBTCLASS() => DEBTCLASS.HasValue;
+    public virtual bool ShouldSerializeCOUPONFREQ() => COUPONFREQ.HasValue;
+    public virtual bool ShouldSerializeCALLTYPE() => CALLTYPE.HasValue;
+    public virtual bool ShouldSerializeASSETCLASS() => ASSETCLASS.HasValue;
 }
