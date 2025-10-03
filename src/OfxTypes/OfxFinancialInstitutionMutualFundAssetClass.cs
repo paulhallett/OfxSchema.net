@@ -12,5 +12,5 @@ public record OfxFinancialInstitutionMutualFundAssetClass
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("FIPORTION")]                    public required OfxFinancialInstitutionPortion FIPORTION { get; set; }
+    [XmlElement("FIPORTION")]                    public required List<OfxFinancialInstitutionPortion> FIPORTION { get; set; }
 }

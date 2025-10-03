@@ -12,5 +12,5 @@ public record OfxMutualFundAssetClass
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("PORTION")]                      public required OfxPortion PORTION { get; set; }
+    [XmlElement("PORTION")]                      public required List<OfxPortion> PORTION { get; set; }
 }

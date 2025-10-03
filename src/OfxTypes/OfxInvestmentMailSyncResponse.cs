@@ -13,5 +13,5 @@ public record OfxInvestmentMailSyncResponse : OfxAbstractSyncResponse
     // </xsd:complexType>
     
     [XmlElement("INVACCTFROM")]                  public required OfxInvestmentAccount INVACCTFROM { get; set; }
-    [XmlElement("INVMAILTRNRS")]                 public OfxInvestmentMailTransactionResponse? INVMAILTRNRS { get; set; }
+    [XmlElement("INVMAILTRNRS")]                 public List<OfxInvestmentMailTransactionResponse>? INVMAILTRNRS { get; set; }
 }

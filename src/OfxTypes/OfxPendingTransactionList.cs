@@ -13,5 +13,5 @@ public record OfxPendingTransactionList
     // </xsd:complexType>
     
     [XmlElement("DTASOF")]                       public required OfxDateTimeType DTASOF { get; set; }
-    [XmlElement("STMTTRNP")]                     public OfxPendingTransaction? STMTTRNP { get; set; }
+    [XmlElement("STMTTRNP")]                     public List<OfxPendingTransaction>? STMTTRNP { get; set; }
 }

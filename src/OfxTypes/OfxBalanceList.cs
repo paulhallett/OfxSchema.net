@@ -12,5 +12,5 @@ public record OfxBalanceList
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("BAL")]                          public OfxBalance? BAL { get; set; }
+    [XmlElement("BAL")]                          public List<OfxBalance>? BAL { get; set; }
 }

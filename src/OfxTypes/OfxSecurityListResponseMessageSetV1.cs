@@ -12,6 +12,6 @@ public record OfxSecurityListResponseMessageSetV1 : OfxAbstractResponseMessageSe
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("SECLISTTRNRS")]                 public OfxSecurityListTransactionResponse? SECLISTTRNRS { get; set; }
+    [XmlElement("SECLISTTRNRS")]                 public List<OfxSecurityListTransactionResponse>? SECLISTTRNRS { get; set; }
     [XmlElement("SECLIST")]                      public OfxSecurityList? SECLIST { get; set; }
 }

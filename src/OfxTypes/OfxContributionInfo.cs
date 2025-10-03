@@ -12,5 +12,5 @@ public record OfxContributionInfo
     //     </xsd:annotation>
     // </xsd:complexType>
     
-    [XmlElement("CONTRIBSECURITY")]              public required OfxContributionSecurity CONTRIBSECURITY { get; set; }
+    [XmlElement("CONTRIBSECURITY")]              public required List<OfxContributionSecurity> CONTRIBSECURITY { get; set; }
 }

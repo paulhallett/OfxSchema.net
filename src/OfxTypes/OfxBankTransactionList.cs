@@ -14,5 +14,5 @@ public record OfxBankTransactionList
     
     [XmlElement("DTSTART")]                      public required OfxDateTimeType DTSTART { get; set; }
     [XmlElement("DTEND")]                        public required OfxDateTimeType DTEND { get; set; }
-    [XmlElement("STMTTRN")]                      public OfxStatementTransaction? STMTTRN { get; set; }
+    [XmlElement("STMTTRN")]                      public List<OfxStatementTransaction>? STMTTRN { get; set; }
 }

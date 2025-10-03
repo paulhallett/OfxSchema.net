@@ -34,5 +34,5 @@ public record OfxInvestmentTransactionList
     [XmlElement("SELLSTOCK")]                    public required OfxSellStock SELLSTOCK { get; set; }
     [XmlElement("SPLIT")]                        public required OfxSplit SPLIT { get; set; }
     [XmlElement("TRANSFER")]                     public required OfxTransfer TRANSFER { get; set; }
-    [XmlElement("INVBANKTRAN")]                  public OfxInvestmentBankTransaction? INVBANKTRAN { get; set; }
+    [XmlElement("INVBANKTRAN")]                  public List<OfxInvestmentBankTransaction>? INVBANKTRAN { get; set; }
 }

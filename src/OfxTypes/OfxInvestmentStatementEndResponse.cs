@@ -14,5 +14,5 @@ public record OfxInvestmentStatementEndResponse
     
     [XmlElement("CURDEF")]                       public required OfxCurrencyEnum CURDEF { get; set; }
     [XmlElement("INVACCTFROM")]                  public required OfxInvestmentAccount INVACCTFROM { get; set; }
-    [XmlElement("INVCLOSING")]                   public OfxInvestmentClosing? INVCLOSING { get; set; }
+    [XmlElement("INVCLOSING")]                   public List<OfxInvestmentClosing>? INVCLOSING { get; set; }
 }
