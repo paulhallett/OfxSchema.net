@@ -11,7 +11,7 @@ public record OfxInvestmentOpenOrderList
     //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:sequence>
-    //         <xsd:choice minOccurs="0">
+    //         <xsd:choice minOccurs="0" maxOccurs="unbounded">
     //             <xsd:element name="OOBUYDEBT" type="ofx:OpenOrderBuyDebt" />
     //             <xsd:element name="OOBUYMF" type="ofx:OpenOrderBuyMutualFund" />
     //             <xsd:element name="OOBUYOPT" type="ofx:OpenOrderBuyOption" />

@@ -11,7 +11,7 @@ public record OfxInvestmentPositionList
     //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:sequence>
-    //         <xsd:choice minOccurs="0">
+    //         <xsd:choice minOccurs="0" maxOccurs="unbounded">
     //             <xsd:element name="POSMF" type="ofx:PositionMutualFund" />
     //             <xsd:element name="POSSTOCK" type="ofx:PositionStock" />
     //             <xsd:element name="POSDEBT" type="ofx:PositionDebt" />

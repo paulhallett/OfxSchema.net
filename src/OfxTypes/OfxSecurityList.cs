@@ -11,7 +11,7 @@ public record OfxSecurityList
     //         </xsd:documentation>
     //     </xsd:annotation>
     //     <xsd:sequence>
-    //         <xsd:choice minOccurs="0">
+    //         <xsd:choice minOccurs="0" maxOccurs="unbounded">
     //             <xsd:element name="MFINFO" type="ofx:MutualFundInfo" />
     //             <xsd:element name="STOCKINFO" type="ofx:StockInfo" />
     //             <xsd:element name="OPTINFO" type="ofx:OptionInfo" />

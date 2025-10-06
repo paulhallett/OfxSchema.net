@@ -13,7 +13,7 @@ public record OfxContributionSecurity
     //     <xsd:sequence>
     //         <xsd:element name="SECID" type="ofx:SecurityId" />
     //         <xsd:choice>
-    //             <xsd:choice>
+    //             <xsd:choice maxOccurs="unbounded">
     //                 <xsd:element name="PRETAXCONTRIBPCT" type="ofx:RateType" />
     //                 <xsd:element name="AFTERTAXCONTRIBPCT" type="ofx:RateType" />
     //                 <xsd:element name="MATCHCONTRIBPCT" type="ofx:RateType" />
@@ -22,7 +22,7 @@ public record OfxContributionSecurity
     //                 <xsd:element name="OTHERVESTPCT" type="ofx:RateType" />
     //                 <xsd:element name="OTHERNONVESTPCT" type="ofx:RateType" />
     //             </xsd:choice>
-    //             <xsd:choice>
+    //             <xsd:choice maxOccurs="unbounded">
     //                 <xsd:element name="PRETAXCONTRIBAMT" type="ofx:AmountType" />
     //                 <xsd:element name="AFTERTAXCONTRIBAMT" type="ofx:AmountType" />
     //                 <xsd:element name="MATCHCONTRIBAMT" type="ofx:AmountType" />

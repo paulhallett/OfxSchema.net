@@ -13,7 +13,7 @@ public record OfxInvestmentTransactionList
     //     <xsd:sequence>
     //         <xsd:element name="DTSTART" type="ofx:DateTimeType" />
     //         <xsd:element name="DTEND" type="ofx:DateTimeType" />
-    //         <xsd:choice minOccurs="0">
+    //         <xsd:choice minOccurs="0" maxOccurs="unbounded">
     //             <xsd:element name="BUYDEBT" type="ofx:BuyDebt" />
     //             <xsd:element name="BUYMF" type="ofx:BuyMutualFund" />
     //             <xsd:element name="BUYOPT" type="ofx:BuyOption" />

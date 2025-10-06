@@ -12,7 +12,7 @@ public record OfxInvestmentStatementResponseMessageSetV1 : OfxAbstractResponseMe
     //     </xsd:annotation>
     //     <xsd:complexContent>
     //         <xsd:extension base="ofx:AbstractResponseMessageSet" />
-    //             <xsd:choice>
+    //             <xsd:choice maxOccurs="unbounded">
     //                 <xsd:element name="INVSTMTTRNRS" type="ofx:InvestmentStatementTransactionResponse" />
     //                 <xsd:element name="INVMAILTRNRS" type="ofx:InvestmentMailTransactionResponse" />
     //                 <xsd:element name="INVMAILSYNCRS" type="ofx:InvestmentMailSyncResponse" />
