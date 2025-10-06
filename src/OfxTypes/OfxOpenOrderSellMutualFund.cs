@@ -10,6 +10,14 @@ public record OfxOpenOrderSellMutualFund : OfxAbstractOpenOrder
     //               The OFX element "OOSELLMF" is of type "OpenOrderSellMutualFund"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SELLTYPE" type="ofx:SellTypeEnum" />
+    //                 <xsd:element name="UNITTYPE" type="ofx:UnitTypeEnum" />
+    //                 <xsd:element name="SELLALL" type="ofx:BooleanType" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SELLTYPE")]                     public required OfxSellTypeEnum SELLTYPE { get; set; }

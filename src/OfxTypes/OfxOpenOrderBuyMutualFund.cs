@@ -10,6 +10,13 @@ public record OfxOpenOrderBuyMutualFund : OfxAbstractOpenOrder
     //               The OFX element "OOBUYMF" is of type "OpenOrderBuyMutualFund"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="BUYTYPE" type="ofx:BuyEnum" />
+    //                 <xsd:element name="UNITTYPE" type="ofx:UnitTypeEnum" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("BUYTYPE")]                      public required OfxBuyEnum BUYTYPE { get; set; }

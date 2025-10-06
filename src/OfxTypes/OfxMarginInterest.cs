@@ -10,6 +10,15 @@ public record OfxMarginInterest : OfxAbstractInvestmentTransaction
     //               The OFX element "MARGININTEREST" is of type "MarginInterest"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //                 <xsd:element name="SUBACCTFUND" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //                 <xsd:element name="ORIGCURRENCY" type="ofx:Currency" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("TOTAL")]                        public required OfxAmountType TOTAL { get; set; }

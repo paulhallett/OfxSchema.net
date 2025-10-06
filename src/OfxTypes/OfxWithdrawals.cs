@@ -10,6 +10,16 @@ public record OfxWithdrawals
     //               The OFX element "WITHDRAWALS" is of type "Withdrawals"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="PRETAX" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="AFTERTAX" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="MATCH" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="PROFITSHARING" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="ROLLOVER" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="OTHERVEST" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="OTHERNONVEST" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("PRETAX")]                       public OfxAmountType? PRETAX { get; set; }

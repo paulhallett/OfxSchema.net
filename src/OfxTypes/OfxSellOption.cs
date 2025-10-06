@@ -10,6 +10,16 @@ public record OfxSellOption : OfxAbstractInvestmentSellTransaction
     //               The OFX element "SELLOPT" is of type "SellOption"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentSellTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="OPTSELLTYPE" type="ofx:OptionSellEnum" />
+    //                 <xsd:element name="SHPERCTRCT" type="ofx:SharesPerType" />
+    //                 <xsd:element name="RELFITID" type="ofx:FinancialInstitutionTransactionIdType" minOccurs="0" />
+    //                 <xsd:element name="RELTYPE" type="ofx:RelatedEnum" minOccurs="0" />
+    //                 <xsd:element name="SECURED" type="ofx:SecuredEnum" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("OPTSELLTYPE")]                  public required OfxOptionSellEnum OPTSELLTYPE { get; set; }

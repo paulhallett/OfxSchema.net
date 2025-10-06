@@ -10,6 +10,16 @@ public record OfxStockInfo : OfxAbstractSecurityInfo
     //               The OFX element "STOCKINFO" is of type "StockInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractSecurityInfo" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="STOCKTYPE" type="ofx:StockEnum" minOccurs="0" />
+    //                 <xsd:element name="YIELD" type="ofx:RateType" minOccurs="0" />
+    //                 <xsd:element name="DTYIELDASOF" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="ASSETCLASS" type="ofx:AssetClassEnum" minOccurs="0" />
+    //                 <xsd:element name="FIASSETCLASS" type="ofx:GenericNameType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("STOCKTYPE")]                    public OfxStockEnum? STOCKTYPE { get; set; }

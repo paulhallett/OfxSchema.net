@@ -10,6 +10,14 @@ public record OfxLoanPaymentInfo
     //               The OFX element LOANPMTINFO is of type "LoanPaymentInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="PRINAMT" type="ofx:AmountType" />
+    //         <xsd:element name="INTAMT" type="ofx:AmountType" />
+    //         <xsd:element name="ESCRWAMT" type="ofx:EscrowAmount" minOccurs="0" />
+    //         <xsd:element name="INSURANCE" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="LATEFEEAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="OTHERAMT" type="ofx:AmountType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("PRINAMT")]                      public required OfxAmountType PRINAMT { get; set; }

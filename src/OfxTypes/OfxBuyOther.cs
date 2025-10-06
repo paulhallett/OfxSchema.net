@@ -10,6 +10,9 @@ public record OfxBuyOther : OfxAbstractInvestmentBuyTransaction
     //               The OFX element "BUYOTHER" is of type "BuyOther"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentBuyTransaction" />
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
 }

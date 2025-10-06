@@ -2,7 +2,7 @@
 
 namespace OfxSchema;
 
-public record OfxUnitPriceType : OfxStringType
+public record OfxUnitPriceType : OfxDecimalType
 {
     // <xsd:simpleType name="UnitPriceType">
     //     <xsd:restriction base="xsd:string">
@@ -13,11 +13,11 @@ public record OfxUnitPriceType : OfxStringType
     //     </xsd:restriction>
     // </xsd:simpleType>    
     
-    public static implicit operator OfxUnitPriceType(string value) => new(value);
-    public static implicit operator string(OfxUnitPriceType value) => value._backingField;
+    public static implicit operator OfxUnitPriceType(decimal value) => new(value);
+    public static implicit operator decimal(OfxUnitPriceType value) => value._backingField;
     
     public OfxUnitPriceType() { }
-    private OfxUnitPriceType(string value)
+    private OfxUnitPriceType(decimal value)
     {
         _backingField = value;
     }

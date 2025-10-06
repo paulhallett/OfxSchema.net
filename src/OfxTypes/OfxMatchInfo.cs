@@ -10,6 +10,14 @@ public record OfxMatchInfo
     //               The OFX element "MATCHINFO" is of type "MatchInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="MATCHPCT" type="ofx:RateType" />
+    //         <xsd:element name="MAXMATCHAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="MAXMATCHPCT" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="STARTOFYEAR" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="BASEMATCHAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="BASEMATCHPCT" type="ofx:RateType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("MATCHPCT")]                     public required OfxRateType MATCHPCT { get; set; }

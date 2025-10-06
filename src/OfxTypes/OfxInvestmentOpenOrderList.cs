@@ -10,6 +10,21 @@ public record OfxInvestmentOpenOrderList
     //               The OFX element "INVOOLIST" is of type "InvestmentOpenOrderList"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:choice minOccurs="0">
+    //             <xsd:element name="OOBUYDEBT" type="ofx:OpenOrderBuyDebt" />
+    //             <xsd:element name="OOBUYMF" type="ofx:OpenOrderBuyMutualFund" />
+    //             <xsd:element name="OOBUYOPT" type="ofx:OpenOrderBuyOption" />
+    //             <xsd:element name="OOBUYOTHER" type="ofx:OpenOrderBuyOther" />
+    //             <xsd:element name="OOBUYSTOCK" type="ofx:OpenOrderBuyStock" />
+    //             <xsd:element name="OOSELLDEBT" type="ofx:OpenOrderSellDebt" />
+    //             <xsd:element name="OOSELLMF" type="ofx:OpenOrderSellMutualFund" />
+    //             <xsd:element name="OOSELLOPT" type="ofx:OpenOrderSellOption" />
+    //             <xsd:element name="OOSELLOTHER" type="ofx:OpenOrderSellOther" />
+    //             <xsd:element name="OOSELLSTOCK" type="ofx:OpenOrderSellStock" />
+    //             <xsd:element name="SWITCHMF" type="ofx:OpenOrderSwitchMutualFund" />
+    //         </xsd:choice>
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("OOBUYDEBT")]                    public required OfxOpenOrderBuyDebt OOBUYDEBT { get; set; }

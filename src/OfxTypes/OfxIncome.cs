@@ -10,6 +10,21 @@ public record OfxIncome : OfxAbstractInvestmentTransaction
     //               The OFX element "INCOME" is of type "Income"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="INCOMETYPE" type="ofx:IncomeEnum" />
+    //                 <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //                 <xsd:element name="SUBACCTSEC" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="SUBACCTFUND" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="TAXEXEMPT" type="ofx:BooleanType" minOccurs="0" />
+    //                 <xsd:element name="WITHHOLDING" type="ofx:PositiveAmountType" minOccurs="0" />
+    //                 <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //                 <xsd:element name="ORIGCURRENCY" type="ofx:Currency" minOccurs="0" />
+    //                 <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

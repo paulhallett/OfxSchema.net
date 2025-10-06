@@ -10,6 +10,32 @@ public record OfxInvestmentBuy : OfxAbstractInvestmentTransaction
     //               The OFX element "INVBUY" is of type "InvestmentBuy"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //                 <xsd:element name="UNITPRICE" type="ofx:UnitPriceType" />
+    //                 <xsd:element name="MARKUP" type="ofx:UnitPriceType" minOccurs="0" />
+    //                 <xsd:element name="COMMISSION" type="ofx:PositiveAmountType" minOccurs="0" />
+    //                 <xsd:element name="TAXES" type="ofx:PositiveAmountType" minOccurs="0" />
+    //                 <xsd:element name="FEES" type="ofx:PositiveAmountType" minOccurs="0" />
+    //                 <xsd:element name="LOAD" type="ofx:PositiveAmountType" minOccurs="0" />
+    //                 <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //                 <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //                 <xsd:element name="ORIGCURRENCY" type="ofx:Currency" minOccurs="0" />
+    //                 <xsd:element name="SUBACCTSEC" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="SUBACCTFUND" type="ofx:SubAccountEnum" />
+    //                 <xsd:sequence minOccurs="0">
+    //                     <xsd:element name="LOANID" type="ofx:LoanIdType" />
+    //                     <xsd:element name="LOANPRINCIPAL" type="ofx:AmountType" />
+    //                     <xsd:element name="LOANINTEREST" type="ofx:AmountType" />
+    //                 </xsd:sequence>
+    //                 <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //                 <xsd:element name="DTPAYROLL" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="PRIORYEARCONTRIB" type="ofx:BooleanType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

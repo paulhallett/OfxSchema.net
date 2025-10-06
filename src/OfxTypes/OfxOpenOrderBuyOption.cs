@@ -10,6 +10,12 @@ public record OfxOpenOrderBuyOption : OfxAbstractOpenOrder
     //               The OFX element "OOBUYOPT" is of type "OpenOrderBuyOption"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="OPTBUYTYPE" type="ofx:OptionBuyEnum" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("OPTBUYTYPE")]                   public required OfxOptionBuyEnum OPTBUYTYPE { get; set; }

@@ -10,6 +10,14 @@ public record OfxBalance
     //               The OFX element "BAL" is of type "Balance"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="NAME" type="ofx:GenericNameType" />
+    //         <xsd:element name="DESC" type="ofx:ShortMessageType" />
+    //         <xsd:element name="BALTYPE" type="ofx:BalanceEnum" />
+    //         <xsd:element name="VALUE" type="ofx:AmountType" />
+    //         <xsd:element name="DTASOF" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("NAME")]                         public required OfxGenericNameType NAME { get; set; }

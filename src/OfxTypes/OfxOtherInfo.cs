@@ -10,6 +10,14 @@ public record OfxOtherInfo : OfxAbstractSecurityInfo
     //               The OFX element "OTHERINFO" is of type "OtherInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractSecurityInfo" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="TYPEDESC" type="ofx:TypeDescriptionType" minOccurs="0" />
+    //                 <xsd:element name="ASSETCLASS" type="ofx:AssetClassEnum" minOccurs="0" />
+    //                 <xsd:element name="FIASSETCLASS" type="ofx:GenericNameType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("TYPEDESC")]                     public OfxTypeDescriptionType? TYPEDESC { get; set; }

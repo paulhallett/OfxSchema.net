@@ -6,6 +6,7 @@ public record OfxDateTimeType : IXmlSerializable
     private string _format = BASIC_FORMAT;
     
     public static implicit operator OfxDateTimeType(DateTime value) => new(value);
+    public static implicit operator DateTime(OfxDateTimeType value) => value._backingField;
     public static implicit operator OfxDateTimeType(DateOnly value) => new(value);
 
     public OfxDateTimeType() { }

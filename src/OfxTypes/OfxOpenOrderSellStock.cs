@@ -10,6 +10,12 @@ public record OfxOpenOrderSellStock : OfxAbstractOpenOrder
     //               The OFX element "OOSELLSTOCK" is of type "OpenOrderSellStock"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SELLTYPE" type="ofx:SellTypeEnum" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SELLTYPE")]                     public required OfxSellTypeEnum SELLTYPE { get; set; }

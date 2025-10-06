@@ -10,6 +10,29 @@ public record OfxContributionSecurity
     //               The OFX element "CONTRIBSECURITY" is of type "ContributionSecurity"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="SECID" type="ofx:SecurityId" />
+    //         <xsd:choice>
+    //             <xsd:choice>
+    //                 <xsd:element name="PRETAXCONTRIBPCT" type="ofx:RateType" />
+    //                 <xsd:element name="AFTERTAXCONTRIBPCT" type="ofx:RateType" />
+    //                 <xsd:element name="MATCHCONTRIBPCT" type="ofx:RateType" />
+    //                 <xsd:element name="PROFITSHARINGCONTRIBPCT" type="ofx:RateType" />
+    //                 <xsd:element name="ROLLOVERCONTRIBPCT" type="ofx:RateType" />
+    //                 <xsd:element name="OTHERVESTPCT" type="ofx:RateType" />
+    //                 <xsd:element name="OTHERNONVESTPCT" type="ofx:RateType" />
+    //             </xsd:choice>
+    //             <xsd:choice>
+    //                 <xsd:element name="PRETAXCONTRIBAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="AFTERTAXCONTRIBAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="MATCHCONTRIBAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="PROFITSHARINGCONTRIBAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="ROLLOVERCONTRIBAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="OTHERVESTAMT" type="ofx:AmountType" />
+    //                 <xsd:element name="OTHERNONVESTAMT" type="ofx:AmountType" />
+    //             </xsd:choice>
+    //         </xsd:choice>
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

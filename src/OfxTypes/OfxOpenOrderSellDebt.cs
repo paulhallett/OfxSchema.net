@@ -10,6 +10,9 @@ public record OfxOpenOrderSellDebt : OfxAbstractOpenOrder
     //               The OFX element "OOSELLDEBT" is of type "OpenOrderSellDebt"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
 }

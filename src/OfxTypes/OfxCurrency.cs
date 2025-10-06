@@ -10,6 +10,10 @@ public record OfxCurrency
     //               The OFX elements "ORIGCURRENCY" and  "CURRENCY" is of type "Currency"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CURRATE" type="ofx:RateType" />
+    //         <xsd:element name="CURSYM" type="ofx:CurrencyEnum" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CURRATE")]                      public required OfxRateType CURRATE { get; set; }

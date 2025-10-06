@@ -10,6 +10,16 @@ public record OfxMutualFundInfo : OfxAbstractSecurityInfo
     //               The OFX element "MFINFO" is of type "MutualFundInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractSecurityInfo" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="MFTYPE" type="ofx:MutualFundTypeEnum" minOccurs="0" />
+    //                 <xsd:element name="YIELD" type="ofx:RateType" minOccurs="0" />
+    //                 <xsd:element name="DTYIELDASOF" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="MFASSETCLASS" type="ofx:MutualFundAssetClass" minOccurs="0" />
+    //                 <xsd:element name="FIMFASSETCLASS" type="ofx:FinancialInstitutionMutualFundAssetClass" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("MFTYPE")]                       public OfxMutualFundTypeEnum? MFTYPE { get; set; }

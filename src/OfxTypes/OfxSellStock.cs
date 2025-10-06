@@ -10,6 +10,12 @@ public record OfxSellStock : OfxAbstractInvestmentSellTransaction
     //               The OFX element "SELLSTOCK" is of type "SellStock"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentSellTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SELLTYPE" type="ofx:SellTypeEnum" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SELLTYPE")]                     public required OfxSellTypeEnum SELLTYPE { get; set; }

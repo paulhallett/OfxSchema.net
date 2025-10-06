@@ -10,6 +10,13 @@ public record OfxYearToDate
     //               The OFX element "YEARTODATE" is of type "YearToDate"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="DTSTART" type="ofx:DateTimeType" />
+    //         <xsd:element name="DTEND" type="ofx:DateTimeType" />
+    //         <xsd:element name="CONTRIBUTIONS" type="ofx:Contributions" minOccurs="0" />
+    //         <xsd:element name="WITHDRAWALS" type="ofx:Withdrawals" minOccurs="0" />
+    //         <xsd:element name="EARNINGS" type="ofx:Earnings" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("DTSTART")]                      public required OfxDateTimeType DTSTART { get; set; }

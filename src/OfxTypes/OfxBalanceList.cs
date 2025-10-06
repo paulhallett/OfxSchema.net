@@ -10,6 +10,9 @@ public record OfxBalanceList
     //               The OFX element "BALLIST" is of type "BalanceList"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="BAL" type="ofx:Balance" minOccurs="0" maxOccurs="unbounded" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("BAL")]                          public List<OfxBalance>? BAL { get; set; }

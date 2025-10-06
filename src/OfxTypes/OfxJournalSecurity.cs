@@ -10,6 +10,15 @@ public record OfxJournalSecurity : OfxAbstractInvestmentTransaction
     //               The OFX element "JRNLSEC" is of type "JournalSecurity"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="SUBACCTTO" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="SUBACCTFROM" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

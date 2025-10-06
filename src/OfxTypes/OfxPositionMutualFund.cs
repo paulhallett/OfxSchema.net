@@ -10,6 +10,15 @@ public record OfxPositionMutualFund : OfxAbstractPositionBase
     //               The OFX element "POSMF" is of type "PositionMutualFund"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractPositionBase" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="UNITSSTREET" type="ofx:PositiveQuantityType" minOccurs="0" />
+    //                 <xsd:element name="UNITSUSER" type="ofx:PositiveQuantityType" minOccurs="0" />
+    //                 <xsd:element name="REINVDIV" type="ofx:BooleanType" minOccurs="0" />
+    //                 <xsd:element name="REINVCG" type="ofx:BooleanType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("UNITSSTREET")]                  public OfxPositiveQuantityType? UNITSSTREET { get; set; }

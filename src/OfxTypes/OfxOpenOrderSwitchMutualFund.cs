@@ -10,6 +10,14 @@ public record OfxOpenOrderSwitchMutualFund : OfxAbstractOpenOrder
     //               The OFX element "SWITCHMF" is of type "OpenOrderSwitchMutualFund"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractOpenOrder" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="UNITTYPE" type="ofx:UnitTypeEnum" />
+    //                 <xsd:element name="SWITCHALL" type="ofx:BooleanType" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

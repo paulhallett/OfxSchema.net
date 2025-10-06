@@ -10,6 +10,9 @@ public record OfxFinancialInstitutionMutualFundAssetClass
     //               The OFX element "FIMFASSETCLASS" is of type "FinancialInstitutionMutualFundAssetClass"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="FIPORTION" type="ofx:FinancialInstitutionPortion" maxOccurs="unbounded" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("FIPORTION")]                    public required List<OfxFinancialInstitutionPortion> FIPORTION { get; set; }

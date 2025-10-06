@@ -10,6 +10,18 @@ public record OfxInvestmentStatementResponse
     //               The OFX element "INVSTMTRS" is of type "InvestmentStatementResponse"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="DTASOF" type="ofx:DateTimeType" />
+    //         <xsd:element name="CURDEF" type="ofx:CurrencyEnum" />
+    //         <xsd:element name="INVACCTFROM" type="ofx:InvestmentAccount" />
+    //         <xsd:element name="INVTRANLIST" type="ofx:InvestmentTransactionList" minOccurs="0" />
+    //         <xsd:element name="INVPOSLIST" type="ofx:InvestmentPositionList" minOccurs="0" />
+    //         <xsd:element name="INVBAL" type="ofx:InvestmentBalance" minOccurs="0" />
+    //         <xsd:element name="INVOOLIST" type="ofx:InvestmentOpenOrderList" minOccurs="0" />
+    //         <xsd:element name="MKTGINFO" type="ofx:InfoType" minOccurs="0" />
+    //         <xsd:element name="INV401K" type="ofx:Investment401k" minOccurs="0" />
+    //         <xsd:element name="INV401KBAL" type="ofx:Investment401kBalance" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("DTASOF")]                       public required OfxDateTimeType DTASOF { get; set; }

@@ -10,6 +10,18 @@ public record OfxStatementResponse
     //               The OFX element "STMTRS" is of type "StatementResponse"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CURDEF" type="ofx:CurrencyEnum" />
+    //         <xsd:element name="BANKACCTFROM" type="ofx:BankAccount" />
+    //         <xsd:element name="BANKTRANLIST" type="ofx:BankTransactionList" minOccurs="0" />
+    //         <xsd:element name="BANKTRANLISTP" type="ofx:PendingTransactionList" minOccurs="0" />
+    //         <xsd:element name="LEDGERBAL" type="ofx:LedgerBalance" />
+    //         <xsd:element name="AVAILBAL" type="ofx:AvailableBalance" minOccurs="0" />
+    //         <xsd:element name="CASHADVBALAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="INTRATE" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="BALLIST" type="ofx:BalanceList" minOccurs="0" />
+    //         <xsd:element name="MKTGINFO" type="ofx:InfoType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CURDEF")]                       public required OfxCurrencyEnum CURDEF { get; set; }

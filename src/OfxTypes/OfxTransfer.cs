@@ -10,6 +10,21 @@ public record OfxTransfer : OfxAbstractInvestmentTransaction
     //               The OFX element "TRANSFER" is of type "Transfer"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="SUBACCTSEC" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //                 <xsd:element name="TFERACTION" type="ofx:InOutEnum" />
+    //                 <xsd:element name="POSTYPE" type="ofx:PositionTypeEnum" />
+    //                 <xsd:element name="INVACCTFROM" type="ofx:InvestmentAccount" minOccurs="0" />
+    //                 <xsd:element name="AVGCOSTBASIS" type="ofx:AmountType" minOccurs="0" />
+    //                 <xsd:element name="UNITPRICE" type="ofx:UnitPriceType" minOccurs="0" />
+    //                 <xsd:element name="DTPURCHASE" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

@@ -2,7 +2,7 @@
 
 namespace OfxSchema;
 
-public record OfxPositiveAmountType : OfxStringType
+public record OfxPositiveAmountType : OfxDecimalType
 {
     // <xsd:simpleType name="PositiveAmountType">
     //     <xsd:restriction base="xsd:string">
@@ -13,11 +13,11 @@ public record OfxPositiveAmountType : OfxStringType
     //     </xsd:restriction>
     // </xsd:simpleType>    
     
-    public static implicit operator OfxPositiveAmountType(string value) => new(value);
-    public static implicit operator string(OfxPositiveAmountType value) => value._backingField;
+    public static implicit operator OfxPositiveAmountType(decimal value) => new(value);
+    public static implicit operator decimal(OfxPositiveAmountType value) => value._backingField;
     
     public OfxPositiveAmountType() { }
-    private OfxPositiveAmountType(string value)
+    private OfxPositiveAmountType(decimal value)
     {
         _backingField = value;
     }

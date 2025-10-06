@@ -10,6 +10,19 @@ public record OfxInvestmentPosition
     //               The OFX element "INVPOS" is of type "InvestmentPosition"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="SECID" type="ofx:SecurityId" />
+    //         <xsd:element name="HELDINACCT" type="ofx:SubAccountEnum" />
+    //         <xsd:element name="POSTYPE" type="ofx:PositionTypeEnum" />
+    //         <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //         <xsd:element name="UNITPRICE" type="ofx:UnitPriceType" />
+    //         <xsd:element name="MKTVAL" type="ofx:AmountType" />
+    //         <xsd:element name="AVGCOSTBASIS" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="DTPRICEASOF" type="ofx:DateTimeType" />
+    //         <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //         <xsd:element name="MEMO" type="ofx:MessageType" minOccurs="0" />
+    //         <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

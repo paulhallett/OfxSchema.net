@@ -10,6 +10,11 @@ public record OfxStatus
     //               The OFX element "STATUS" is of type "Status"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CODE" type="ofx:ErrorType" />
+    //         <xsd:element name="SEVERITY" type="ofx:SeverityEnum" />
+    //         <xsd:element name="MESSAGE" type="ofx:MessageType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CODE")]                         public required OfxErrorType CODE { get; set; }

@@ -10,6 +10,10 @@ public record OfxInvestmentClosing
     //               The OFX element "INVCLOSING" is of type "InvestmentClosing"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="FITID" type="ofx:FinancialInstitutionTransactionIdType" />
+    //         <xsd:element name="IMAGEDATA" type="ofx:ImageData" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("FITID")]                        public required OfxFinancialInstitutionTransactionIdType FITID { get; set; }

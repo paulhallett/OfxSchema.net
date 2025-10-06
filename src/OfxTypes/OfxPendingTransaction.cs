@@ -10,6 +10,21 @@ public record OfxPendingTransaction
     //               The OFX element "STMTTRNP" is of type "PendingTransaction"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="TRNTYPE" type="ofx:TransactionEnum" />
+    //         <xsd:element name="DTTRAN" type="ofx:DateTimeType" />
+    //         <xsd:element name="DTEXPIRE" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="TRNAMT" type="ofx:AmountType" />
+    //         <xsd:element name="REFNUM" type="ofx:ReferenceNumberType" minOccurs="0" />
+    //         <xsd:element name="NAME" type="ofx:GenericNameType" />
+    //         <xsd:element name="EXTDNAME" type="ofx:ExtendedNameType" minOccurs="0" />
+    //         <xsd:element name="MEMO" type="ofx:MessageType" minOccurs="0" />
+    //         <xsd:element name="IMAGEDATA" type="ofx:ImageData" minOccurs="0" maxOccurs="2" />
+    //         <xsd:choice minOccurs="0">
+    //             <xsd:element name="CURRENCY" type="ofx:Currency" />
+    //             <xsd:element name="ORIGCURRENCY" type="ofx:Currency" />
+    //         </xsd:choice>
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("TRNTYPE")]                      public required OfxTransactionEnum TRNTYPE { get; set; }

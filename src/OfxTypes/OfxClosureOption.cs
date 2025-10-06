@@ -10,6 +10,18 @@ public record OfxClosureOption : OfxAbstractInvestmentTransaction
     //               The OFX element "CLOSUREOPT" is of type "ClosureOption"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="OPTACTION" type="ofx:OptionActionEnum" />
+    //                 <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //                 <xsd:element name="SHPERCTRCT" type="ofx:SharesPerType" />
+    //                 <xsd:element name="SUBACCTSEC" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="RELFITID" type="ofx:FinancialInstitutionTransactionIdType" minOccurs="0" />
+    //                 <xsd:element name="GAIN" type="ofx:AmountType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }

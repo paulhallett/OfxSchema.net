@@ -10,6 +10,9 @@ public record OfxPositionDebt : OfxAbstractPositionBase
     //               The OFX element "POSDEBT" is of type "PositionDebt"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractPositionBase" />
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
 }

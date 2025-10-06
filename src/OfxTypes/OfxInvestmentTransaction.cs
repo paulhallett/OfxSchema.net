@@ -10,6 +10,14 @@ public record OfxInvestmentTransaction
     //               The OFX element "INVTRAN" is of type "InvestmentTransaction"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="FITID" type="ofx:FinancialInstitutionTransactionIdType" />
+    //         <xsd:element name="SRVRTID" type="ofx:ServerIdType" minOccurs="0" />
+    //         <xsd:element name="DTTRADE" type="ofx:DateTimeType" />
+    //         <xsd:element name="DTSETTLE" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="REVERSALFITID" type="ofx:FinancialInstitutionTransactionIdType" minOccurs="0" />
+    //         <xsd:element name="MEMO" type="ofx:MessageType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("FITID")]                        public required OfxFinancialInstitutionTransactionIdType FITID { get; set; }

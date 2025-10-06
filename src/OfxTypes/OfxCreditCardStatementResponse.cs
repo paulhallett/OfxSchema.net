@@ -10,6 +10,23 @@ public record OfxCreditCardStatementResponse
     //               The OFX element "CCSTMTRS" is of type "CreditCardStatementResponse"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CURDEF" type="ofx:CurrencyEnum" />
+    //         <xsd:element name="CCACCTFROM" type="ofx:CreditCardAccount" />
+    //         <xsd:element name="BANKTRANLIST" type="ofx:BankTransactionList" minOccurs="0" />
+    //         <xsd:element name="BANKTRANLISTP" type="ofx:PendingTransactionList" minOccurs="0" />
+    //         <xsd:element name="LEDGERBAL" type="ofx:LedgerBalance" />
+    //         <xsd:element name="AVAILBAL" type="ofx:AvailableBalance" minOccurs="0" />
+    //         <xsd:element name="CASHADVBALAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="CASHADVAVAILAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="CASHADVCREDITLIMIT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="INTRATEPURCH" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="INTRATECASH" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="INTRATEXFER" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="REWARDINFO" type="ofx:RewardInfoType" minOccurs="0" />
+    //         <xsd:element name="BALLIST" type="ofx:BalanceList" minOccurs="0" />
+    //         <xsd:element name="MKTGINFO" type="ofx:InfoType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CURDEF")]                       public required OfxCurrencyEnum CURDEF { get; set; }

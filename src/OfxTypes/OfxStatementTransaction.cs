@@ -10,6 +10,40 @@ public record OfxStatementTransaction
     //               The OFX element "STMTTRN" is of type "StatementTransaction"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="TRNTYPE" type="ofx:TransactionEnum" />
+    //         <xsd:element name="DTPOSTED" type="ofx:DateTimeType" />
+    //         <xsd:element name="DTUSER" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="DTAVAIL" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="TRNAMT" type="ofx:AmountType" />
+    //         <xsd:element name="LOANPMTINFO" type="ofx:LoanPaymentInfo" minOccurs="0" />
+    //         <xsd:element name="FITID" type="ofx:FinancialInstitutionTransactionIdType" />
+    //         <xsd:sequence minOccurs="0">
+    //             <xsd:element name="CORRECTFITID" type="ofx:FinancialInstitutionTransactionIdType" />
+    //             <xsd:element name="CORRECTACTION" type="ofx:CorrectiveActionEnum" />
+    //         </xsd:sequence>
+    //         <xsd:element name="SRVRTID" type="ofx:ServerIdType" minOccurs="0" />
+    //         <xsd:element name="CHECKNUM" type="ofx:CheckNumberType" minOccurs="0" />
+    //         <xsd:element name="REFNUM" type="ofx:ReferenceNumberType" minOccurs="0" />
+    //         <xsd:element name="SIC" type="ofx:StandardIndustryCodeType" minOccurs="0" />
+    //         <xsd:element name="PAYEEID" type="ofx:PayeeIdType" minOccurs="0" />
+    //         <xsd:choice minOccurs="0">
+    //             <xsd:element name="NAME" type="ofx:GenericNameType" />
+    //             <xsd:element name="PAYEE" type="ofx:Payee" />
+    //         </xsd:choice>
+    //         <xsd:element name="EXTDNAME" type="ofx:ExtendedNameType" minOccurs="0" />
+    //         <xsd:choice minOccurs="0">
+    //             <xsd:element name="BANKACCTTO" type="ofx:BankAccount" />
+    //             <xsd:element name="CCACCTTO" type="ofx:CreditCardAccount" />
+    //         </xsd:choice>
+    //         <xsd:element name="MEMO" type="ofx:MessageType" minOccurs="0" />
+    //         <xsd:element name="IMAGEDATA" type="ofx:ImageData" minOccurs="0" maxOccurs="2" />
+    //         <xsd:choice minOccurs="0">
+    //             <xsd:element name="CURRENCY" type="ofx:Currency" />
+    //             <xsd:element name="ORIGCURRENCY" type="ofx:Currency" />
+    //         </xsd:choice>
+    //         <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("TRNTYPE")]                      public required OfxTransactionEnum TRNTYPE { get; set; }

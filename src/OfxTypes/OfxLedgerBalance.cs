@@ -10,6 +10,10 @@ public record OfxLedgerBalance
     //               The OFX element "LEDGERBAL" is of type "LedgerBalance"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="BALAMT" type="ofx:AmountType" />
+    //         <xsd:element name="DTASOF" type="ofx:DateTimeType" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("BALAMT")]                       public required OfxAmountType BALAMT { get; set; }

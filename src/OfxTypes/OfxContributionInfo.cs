@@ -10,6 +10,9 @@ public record OfxContributionInfo
     //               The OFX element "CONTRIBINFO" is of type "ContributionInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CONTRIBSECURITY" type="ofx:ContributionSecurity" maxOccurs="unbounded" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CONTRIBSECURITY")]              public required List<OfxContributionSecurity> CONTRIBSECURITY { get; set; }

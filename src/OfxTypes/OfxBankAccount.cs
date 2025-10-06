@@ -10,6 +10,16 @@ public record OfxBankAccount : OfxAbstractAccount
     //               The OFX elements BANKACCTFROM and BANKACCTTO are of type "BankAccount"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractAccount" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="BANKID" type="ofx:BankIdType" />
+    //                 <xsd:element name="BRANCHID" type="ofx:AccountIdType" minOccurs="0" />
+    //                 <xsd:element name="ACCTID" type="ofx:AccountIdType" />
+    //                 <xsd:element name="ACCTTYPE" type="ofx:AccountEnum" />
+    //                 <xsd:element name="ACCTKEY" type="ofx:AccountIdType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("BANKID")]                       public required OfxBankIdType BANKID { get; set; }

@@ -10,6 +10,22 @@ public record OfxGeneralOpenOrder
     //               The OFX element "OO" is of type "GeneralOpenOrder"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="FITID" type="ofx:FinancialInstitutionTransactionIdType" />
+    //         <xsd:element name="SRVRTID" type="ofx:ServerIdType" minOccurs="0" />
+    //         <xsd:element name="SECID" type="ofx:SecurityId" />
+    //         <xsd:element name="DTPLACED" type="ofx:DateTimeType" />
+    //         <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //         <xsd:element name="SUBACCT" type="ofx:SubAccountEnum" />
+    //         <xsd:element name="DURATION" type="ofx:DurationEnum" />
+    //         <xsd:element name="RESTRICTION" type="ofx:RestrictionEnum" />
+    //         <xsd:element name="MINUNITS" type="ofx:QuantityType" minOccurs="0" />
+    //         <xsd:element name="LIMITPRICE" type="ofx:UnitPriceType" minOccurs="0" />
+    //         <xsd:element name="STOPPRICE" type="ofx:UnitPriceType" minOccurs="0" />
+    //         <xsd:element name="MEMO" type="ofx:MessageType" minOccurs="0" />
+    //         <xsd:element name="CURRENCY" type="ofx:Currency" minOccurs="0" />
+    //         <xsd:element name="INV401KSOURCE" type="ofx:Investment401kSourceEnum" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("FITID")]                        public required OfxFinancialInstitutionTransactionIdType FITID { get; set; }

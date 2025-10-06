@@ -10,6 +10,18 @@ public record OfxInvestment401kBalance
     //               The OFX element "INV401KBAL" is of type "Investment401kBalance"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="CASHBAL" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="PRETAX" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="AFTERTAX" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="MATCH" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="PROFITSHARING" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="ROLLOVER" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="OTHERVEST" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="OTHERNONVEST" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //         <xsd:element name="BALLIST" type="ofx:BalanceList" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("CASHBAL")]                      public OfxAmountType? CASHBAL { get; set; }

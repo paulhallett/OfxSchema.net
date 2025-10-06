@@ -10,6 +10,21 @@ public record OfxInvestment401k
     //               The OFX element "INV401K" is of type "Investment401k"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="EMPLOYERNAME" type="ofx:GenericNameType" />
+    //         <xsd:element name="PLANID" type="ofx:IdType" minOccurs="0" />
+    //         <xsd:element name="PLANJOINDATE" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="EMPLOYERCONTACTINFO" type="ofx:GenericContactInfoType" minOccurs="0" />
+    //         <xsd:element name="BROKERCONTACTINFO" type="ofx:GenericContactInfoType" minOccurs="0" />
+    //         <xsd:element name="DEFERPCTPRETAX" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="DEFERPCTAFTERTAX" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="MATCHINFO" type="ofx:MatchInfo" minOccurs="0" />
+    //         <xsd:element name="CONTRIBINFO" type="ofx:ContributionInfo" minOccurs="0" />
+    //         <xsd:element name="CURRENTVESTPCT" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="VESTINFO" type="ofx:VestInfo" minOccurs="0" maxOccurs="unbounded" />
+    //         <xsd:element name="LOANINFO" type="ofx:LoanInfo" minOccurs="0" maxOccurs="unbounded" />
+    //         <xsd:element name="INV401KSUMMARY" type="ofx:Investment401kSummary" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("EMPLOYERNAME")]                 public required OfxGenericNameType EMPLOYERNAME { get; set; }

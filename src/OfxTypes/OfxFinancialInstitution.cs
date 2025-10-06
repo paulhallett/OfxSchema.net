@@ -10,6 +10,10 @@ public record OfxFinancialInstitution
     //               The OFX element "FI" is of type "FinancialInstitution"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="ORG" type="ofx:GenericNameType" />
+    //         <xsd:element name="FID" type="ofx:FinancialInstitutionIdType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("ORG")]                          public required OfxGenericNameType ORG { get; set; }

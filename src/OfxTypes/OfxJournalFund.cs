@@ -10,6 +10,14 @@ public record OfxJournalFund : OfxAbstractInvestmentTransaction
     //               The OFX element "JRNLFUND" is of type "JournalFund"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SUBACCTTO" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="SUBACCTFROM" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="TOTAL" type="ofx:AmountType" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("SUBACCTTO")]                    public required OfxSubAccountEnum SUBACCTTO { get; set; }

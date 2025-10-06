@@ -10,6 +10,23 @@ public record OfxLoanInfo
     //               The OFX element "LOANINFO" is of type "LoanInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:sequence>
+    //         <xsd:element name="LOANID" type="ofx:LoanIdType" />
+    //         <xsd:element name="LOANDESC" type="ofx:GenericDescriptionType" minOccurs="0" />
+    //         <xsd:element name="INITIALLOANBAL" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="LOANSTARTDATE" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="CURRENTLOANBAL" type="ofx:AmountType" />
+    //         <xsd:element name="DTASOF" type="ofx:DateTimeType" />
+    //         <xsd:element name="LOANRATE" type="ofx:RateType" minOccurs="0" />
+    //         <xsd:element name="LOANPMTAMT" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="LOANPMTFREQ" type="ofx:InvestmentFrequencyEnum" minOccurs="0" />
+    //         <xsd:element name="LOANPMTSINITIAL" type="ofx:NumberPayments" minOccurs="0" />
+    //         <xsd:element name="LOANPMTSREMAINING" type="ofx:NumberPayments" minOccurs="0" />
+    //         <xsd:element name="LOANMATURITYDATE" type="ofx:DateTimeType" minOccurs="0" />
+    //         <xsd:element name="LOANTOTALPROJINTEREST" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="LOANINTERESTTODATE" type="ofx:AmountType" minOccurs="0" />
+    //         <xsd:element name="LOANNEXTPMTDATE" type="ofx:DateTimeType" minOccurs="0" />
+    //     </xsd:sequence>
     // </xsd:complexType>
     
     [XmlElement("LOANID")]                       public required OfxLoanIdType LOANID { get; set; }

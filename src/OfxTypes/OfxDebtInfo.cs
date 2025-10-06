@@ -10,6 +10,25 @@ public record OfxDebtInfo : OfxAbstractSecurityInfo
     //               The OFX element "DEBTINFO" is of type "DebtInfo"
     //         </xsd:documentation>
     //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractSecurityInfo" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="PARVALUE" type="ofx:AmountType" />
+    //                 <xsd:element name="DEBTTYPE" type="ofx:DebtEnum" />
+    //                 <xsd:element name="DEBTCLASS" type="ofx:DebtClassEnum" minOccurs="0" />
+    //                 <xsd:element name="COUPONRT" type="ofx:RateType" minOccurs="0" />
+    //                 <xsd:element name="DTCOUPON" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="COUPONFREQ" type="ofx:CouponFrequencyEnum" minOccurs="0" />
+    //                 <xsd:element name="CALLPRICE" type="ofx:UnitPriceType" minOccurs="0" />
+    //                 <xsd:element name="YIELDTOCALL" type="ofx:RateType" minOccurs="0" />
+    //                 <xsd:element name="DTCALL" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="CALLTYPE" type="ofx:CallTypeEnum" minOccurs="0" />
+    //                 <xsd:element name="YIELDTOMAT" type="ofx:RateType" minOccurs="0" />
+    //                 <xsd:element name="DTMAT" type="ofx:DateTimeType" minOccurs="0" />
+    //                 <xsd:element name="ASSETCLASS" type="ofx:AssetClassEnum" minOccurs="0" />
+    //                 <xsd:element name="FIASSETCLASS" type="ofx:GenericNameType" minOccurs="0" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
     // </xsd:complexType>
     
     [XmlElement("PARVALUE")]                     public required OfxAmountType PARVALUE { get; set; }
