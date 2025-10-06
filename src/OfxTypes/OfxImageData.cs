@@ -26,8 +26,8 @@ public record OfxImageData
     [XmlElement("IMAGETYPE")]                    public required OfxImageTypeEnum IMAGETYPE { get; set; }
     [XmlElement("IMAGEREF")]                     public required OfxImageRefType IMAGEREF { get; set; }
     [XmlElement("IMAGEREFTYPE")]                 public required OfxImageRefTypeEnum IMAGEREFTYPE { get; set; }
-    [XmlElement("IMAGEDELAY")]                   public required OfxImageDelayType IMAGEDELAY { get; set; }
-    [XmlElement("DTIMAGEAVAIL")]                 public required OfxDateTimeType DTIMAGEAVAIL { get; set; }
+    [XmlElement("IMAGEDELAY")]                   public OfxImageDelayType? IMAGEDELAY { get; set; }
+    [XmlElement("DTIMAGEAVAIL")]                 public OfxDateTimeType? DTIMAGEAVAIL { get; set; }
     [XmlElement("IMAGETTL")]                     public OfxImageTotalType? IMAGETTL { get; set; }
     [XmlElement("CHECKSUP")]                     public OfxCheckSupportEnum? CHECKSUP { get; set; }
     

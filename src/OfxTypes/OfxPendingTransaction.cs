@@ -36,6 +36,6 @@ public record OfxPendingTransaction
     [XmlElement("EXTDNAME")]                     public OfxExtendedNameType? EXTDNAME { get; set; }
     [XmlElement("MEMO")]                         public OfxMessageType? MEMO { get; set; }
     [XmlElement("IMAGEDATA")]                    public List<OfxImageData>? IMAGEDATA { get; set; }
-    [XmlElement("CURRENCY")]                     public required OfxCurrency CURRENCY { get; set; }
-    [XmlElement("ORIGCURRENCY")]                 public required OfxCurrency ORIGCURRENCY { get; set; }
+    [XmlElement("CURRENCY")]                     public OfxCurrency? CURRENCY { get; set; }
+    [XmlElement("ORIGCURRENCY")]                 public OfxCurrency? ORIGCURRENCY { get; set; }
 }

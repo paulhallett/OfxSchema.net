@@ -60,15 +60,15 @@ public record OfxStatementTransaction
     [XmlElement("REFNUM")]                       public OfxReferenceNumberType? REFNUM { get; set; }
     [XmlElement("SIC")]                          public OfxStandardIndustryCodeType? SIC { get; set; }
     [XmlElement("PAYEEID")]                      public OfxPayeeIdType? PAYEEID { get; set; }
-    [XmlElement("NAME")]                         public required OfxGenericNameType NAME { get; set; }
-    [XmlElement("PAYEE")]                        public required OfxPayee PAYEE { get; set; }
+    [XmlElement("NAME")]                         public OfxGenericNameType? NAME { get; set; }
+    [XmlElement("PAYEE")]                        public OfxPayee? PAYEE { get; set; }
     [XmlElement("EXTDNAME")]                     public OfxExtendedNameType? EXTDNAME { get; set; }
-    [XmlElement("BANKACCTTO")]                   public required OfxBankAccount BANKACCTTO { get; set; }
-    [XmlElement("CCACCTTO")]                     public required OfxCreditCardAccount CCACCTTO { get; set; }
+    [XmlElement("BANKACCTTO")]                   public OfxBankAccount? BANKACCTTO { get; set; }
+    [XmlElement("CCACCTTO")]                     public OfxCreditCardAccount? CCACCTTO { get; set; }
     [XmlElement("MEMO")]                         public OfxMessageType? MEMO { get; set; }
     [XmlElement("IMAGEDATA")]                    public List<OfxImageData>? IMAGEDATA { get; set; }
-    [XmlElement("CURRENCY")]                     public required OfxCurrency CURRENCY { get; set; }
-    [XmlElement("ORIGCURRENCY")]                 public required OfxCurrency ORIGCURRENCY { get; set; }
+    [XmlElement("CURRENCY")]                     public OfxCurrency? CURRENCY { get; set; }
+    [XmlElement("ORIGCURRENCY")]                 public OfxCurrency? ORIGCURRENCY { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
     
     public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;

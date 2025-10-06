@@ -21,9 +21,9 @@ public record OfxSecurityList
     //     </xsd:sequence>
     // </xsd:complexType>
     
-    [XmlElement("MFINFO")]                       public required OfxMutualFundInfo MFINFO { get; set; }
-    [XmlElement("STOCKINFO")]                    public required OfxStockInfo STOCKINFO { get; set; }
-    [XmlElement("OPTINFO")]                      public required OfxOptionInfo OPTINFO { get; set; }
-    [XmlElement("DEBTINFO")]                     public required OfxDebtInfo DEBTINFO { get; set; }
-    [XmlElement("OTHERINFO")]                    public required OfxOtherInfo OTHERINFO { get; set; }
+    [XmlElement("MFINFO")]                       public OfxMutualFundInfo? MFINFO { get; set; }
+    [XmlElement("STOCKINFO")]                    public OfxStockInfo? STOCKINFO { get; set; }
+    [XmlElement("OPTINFO")]                      public OfxOptionInfo? OPTINFO { get; set; }
+    [XmlElement("DEBTINFO")]                     public OfxDebtInfo? DEBTINFO { get; set; }
+    [XmlElement("OTHERINFO")]                    public OfxOtherInfo? OTHERINFO { get; set; }
 }
