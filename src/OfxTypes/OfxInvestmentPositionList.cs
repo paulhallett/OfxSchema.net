@@ -21,9 +21,12 @@ public record OfxInvestmentPositionList
     //     </xsd:sequence>
     // </xsd:complexType>
     
-    [XmlElement("POSMF")]                        public OfxPositionMutualFund? POSMF { get; set; }
-    [XmlElement("POSSTOCK")]                     public OfxPositionStock? POSSTOCK { get; set; }
-    [XmlElement("POSDEBT")]                      public OfxPositionDebt? POSDEBT { get; set; }
-    [XmlElement("POSOPT")]                       public OfxPositionOption? POSOPT { get; set; }
-    [XmlElement("POSOTHER")]                     public OfxPositionOther? POSOTHER { get; set; }
+    
+    [XmlElement("POSMF", typeof(OfxPositionMutualFund))]
+    [XmlElement("POSSTOCK", typeof(OfxPositionStock))]
+    [XmlElement("POSDEBT", typeof(OfxPositionDebt))]
+    [XmlElement("POSOPT", typeof(OfxPositionOption))]
+    [XmlElement("POSOTHER", typeof(OfxPositionOther))]
+    public required List<OfxAbstractPositionBase> ITEMS { get; set; }
+    
 }

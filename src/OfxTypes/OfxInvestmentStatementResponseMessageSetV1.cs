@@ -21,8 +21,11 @@ public record OfxInvestmentStatementResponseMessageSetV1 : OfxAbstractResponseMe
     //     </xsd:complexContent>
     // </xsd:complexType>
     
-    [XmlElement("INVSTMTTRNRS")]                 public OfxInvestmentStatementTransactionResponse? INVSTMTTRNRS { get; set; }
-    [XmlElement("INVMAILTRNRS")]                 public OfxInvestmentMailTransactionResponse? INVMAILTRNRS { get; set; }
-    [XmlElement("INVMAILSYNCRS")]                public OfxInvestmentMailSyncResponse? INVMAILSYNCRS { get; set; }
-    [XmlElement("INVSTMTENDRS")]                 public OfxInvestmentStatementEndResponse? INVSTMTENDRS { get; set; }
+    
+    [XmlElement("INVSTMTTRNRS", typeof(OfxInvestmentStatementTransactionResponse))]
+    [XmlElement("INVMAILTRNRS", typeof(OfxInvestmentMailTransactionResponse))]
+    [XmlElement("INVMAILSYNCRS", typeof(OfxInvestmentMailSyncResponse))]
+    [XmlElement("INVSTMTENDRS", typeof(OfxInvestmentStatementEndResponse))]
+    public required List<OfxAbstractResponse> ITEMS { get; set; }
+    
 }

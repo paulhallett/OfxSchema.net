@@ -53,8 +53,8 @@ public record OfxStatementTransaction
     [XmlElement("TRNAMT")]                       public required OfxAmountType TRNAMT { get; set; }
     [XmlElement("LOANPMTINFO")]                  public OfxLoanPaymentInfo? LOANPMTINFO { get; set; }
     [XmlElement("FITID")]                        public required OfxFinancialInstitutionTransactionIdType FITID { get; set; }
-    [XmlElement("CORRECTFITID")]                 public required OfxFinancialInstitutionTransactionIdType CORRECTFITID { get; set; }
-    [XmlElement("CORRECTACTION")]                public required OfxCorrectiveActionEnum CORRECTACTION { get; set; }
+    [XmlElement("CORRECTFITID")]                 public OfxFinancialInstitutionTransactionIdType? CORRECTFITID { get; set; }
+    [XmlElement("CORRECTACTION")]                public OfxCorrectiveActionEnum? CORRECTACTION { get; set; }
     [XmlElement("SRVRTID")]                      public OfxServerIdType? SRVRTID { get; set; }
     [XmlElement("CHECKNUM")]                     public OfxCheckNumberType? CHECKNUM { get; set; }
     [XmlElement("REFNUM")]                       public OfxReferenceNumberType? REFNUM { get; set; }

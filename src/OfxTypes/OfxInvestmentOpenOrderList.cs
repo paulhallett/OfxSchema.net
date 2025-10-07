@@ -27,15 +27,18 @@ public record OfxInvestmentOpenOrderList
     //     </xsd:sequence>
     // </xsd:complexType>
     
-    [XmlElement("OOBUYDEBT")]                    public OfxOpenOrderBuyDebt? OOBUYDEBT { get; set; }
-    [XmlElement("OOBUYMF")]                      public OfxOpenOrderBuyMutualFund? OOBUYMF { get; set; }
-    [XmlElement("OOBUYOPT")]                     public OfxOpenOrderBuyOption? OOBUYOPT { get; set; }
-    [XmlElement("OOBUYOTHER")]                   public OfxOpenOrderBuyOther? OOBUYOTHER { get; set; }
-    [XmlElement("OOBUYSTOCK")]                   public OfxOpenOrderBuyStock? OOBUYSTOCK { get; set; }
-    [XmlElement("OOSELLDEBT")]                   public OfxOpenOrderSellDebt? OOSELLDEBT { get; set; }
-    [XmlElement("OOSELLMF")]                     public OfxOpenOrderSellMutualFund? OOSELLMF { get; set; }
-    [XmlElement("OOSELLOPT")]                    public OfxOpenOrderSellOption? OOSELLOPT { get; set; }
-    [XmlElement("OOSELLOTHER")]                  public OfxOpenOrderSellOther? OOSELLOTHER { get; set; }
-    [XmlElement("OOSELLSTOCK")]                  public OfxOpenOrderSellStock? OOSELLSTOCK { get; set; }
-    [XmlElement("SWITCHMF")]                     public OfxOpenOrderSwitchMutualFund? SWITCHMF { get; set; }
+    
+    [XmlElement("OOBUYDEBT", typeof(OfxOpenOrderBuyDebt))]
+    [XmlElement("OOBUYMF", typeof(OfxOpenOrderBuyMutualFund))]
+    [XmlElement("OOBUYOPT", typeof(OfxOpenOrderBuyOption))]
+    [XmlElement("OOBUYOTHER", typeof(OfxOpenOrderBuyOther))]
+    [XmlElement("OOBUYSTOCK", typeof(OfxOpenOrderBuyStock))]
+    [XmlElement("OOSELLDEBT", typeof(OfxOpenOrderSellDebt))]
+    [XmlElement("OOSELLMF", typeof(OfxOpenOrderSellMutualFund))]
+    [XmlElement("OOSELLOPT", typeof(OfxOpenOrderSellOption))]
+    [XmlElement("OOSELLOTHER", typeof(OfxOpenOrderSellOther))]
+    [XmlElement("OOSELLSTOCK", typeof(OfxOpenOrderSellStock))]
+    [XmlElement("SWITCHMF", typeof(OfxOpenOrderSwitchMutualFund))]
+    public required List<OfxAbstractOpenOrder> ITEMS { get; set; }
+    
 }

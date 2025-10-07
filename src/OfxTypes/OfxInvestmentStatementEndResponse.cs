@@ -2,7 +2,7 @@
 
 namespace OfxSchema;
 
-public record OfxInvestmentStatementEndResponse
+public record OfxInvestmentStatementEndResponse : OfxAbstractResponse
 {
     // <xsd:complexType name="InvestmentStatementEndResponse">
     //     <xsd:annotation>

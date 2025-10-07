@@ -41,25 +41,28 @@ public record OfxInvestmentTransactionList
     
     [XmlElement("DTSTART")]                      public required OfxDateTimeType DTSTART { get; set; }
     [XmlElement("DTEND")]                        public required OfxDateTimeType DTEND { get; set; }
-    [XmlElement("BUYDEBT")]                      public OfxBuyDebt? BUYDEBT { get; set; }
-    [XmlElement("BUYMF")]                        public OfxBuyMutualFund? BUYMF { get; set; }
-    [XmlElement("BUYOPT")]                       public OfxBuyOption? BUYOPT { get; set; }
-    [XmlElement("BUYOTHER")]                     public OfxBuyOther? BUYOTHER { get; set; }
-    [XmlElement("BUYSTOCK")]                     public OfxBuyStock? BUYSTOCK { get; set; }
-    [XmlElement("CLOSUREOPT")]                   public OfxClosureOption? CLOSUREOPT { get; set; }
-    [XmlElement("INCOME")]                       public OfxIncome? INCOME { get; set; }
-    [XmlElement("INVEXPENSE")]                   public OfxInvestmentExpense? INVEXPENSE { get; set; }
-    [XmlElement("JRNLFUND")]                     public OfxJournalFund? JRNLFUND { get; set; }
-    [XmlElement("JRNLSEC")]                      public OfxJournalSecurity? JRNLSEC { get; set; }
-    [XmlElement("MARGININTEREST")]               public OfxMarginInterest? MARGININTEREST { get; set; }
-    [XmlElement("REINVEST")]                     public OfxReinvest? REINVEST { get; set; }
-    [XmlElement("RETOFCAP")]                     public OfxReturnOfCapital? RETOFCAP { get; set; }
-    [XmlElement("SELLDEBT")]                     public OfxSellDebt? SELLDEBT { get; set; }
-    [XmlElement("SELLMF")]                       public OfxSellMutualFund? SELLMF { get; set; }
-    [XmlElement("SELLOPT")]                      public OfxSellOption? SELLOPT { get; set; }
-    [XmlElement("SELLOTHER")]                    public OfxSellOther? SELLOTHER { get; set; }
-    [XmlElement("SELLSTOCK")]                    public OfxSellStock? SELLSTOCK { get; set; }
-    [XmlElement("SPLIT")]                        public OfxSplit? SPLIT { get; set; }
-    [XmlElement("TRANSFER")]                     public OfxTransfer? TRANSFER { get; set; }
+    
+    [XmlElement("BUYDEBT", typeof(OfxBuyDebt))]
+    [XmlElement("BUYMF", typeof(OfxBuyMutualFund))]
+    [XmlElement("BUYOPT", typeof(OfxBuyOption))]
+    [XmlElement("BUYOTHER", typeof(OfxBuyOther))]
+    [XmlElement("BUYSTOCK", typeof(OfxBuyStock))]
+    [XmlElement("CLOSUREOPT", typeof(OfxClosureOption))]
+    [XmlElement("INCOME", typeof(OfxIncome))]
+    [XmlElement("INVEXPENSE", typeof(OfxInvestmentExpense))]
+    [XmlElement("JRNLFUND", typeof(OfxJournalFund))]
+    [XmlElement("JRNLSEC", typeof(OfxJournalSecurity))]
+    [XmlElement("MARGININTEREST", typeof(OfxMarginInterest))]
+    [XmlElement("REINVEST", typeof(OfxReinvest))]
+    [XmlElement("RETOFCAP", typeof(OfxReturnOfCapital))]
+    [XmlElement("SELLDEBT", typeof(OfxSellDebt))]
+    [XmlElement("SELLMF", typeof(OfxSellMutualFund))]
+    [XmlElement("SELLOPT", typeof(OfxSellOption))]
+    [XmlElement("SELLOTHER", typeof(OfxSellOther))]
+    [XmlElement("SELLSTOCK", typeof(OfxSellStock))]
+    [XmlElement("SPLIT", typeof(OfxSplit))]
+    [XmlElement("TRANSFER", typeof(OfxTransfer))]
+    public required List<OfxAbstractInvestmentTransactionBase> ITEMS { get; set; }
+    
     [XmlElement("INVBANKTRAN")]                  public List<OfxInvestmentBankTransaction>? INVBANKTRAN { get; set; }
 }
