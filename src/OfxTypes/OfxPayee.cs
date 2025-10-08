@@ -28,8 +28,8 @@ public record OfxPayee
     // </xsd:complexType>
     
     [XmlElement("NAME")]                         public required OfxGenericNameType NAME { get; set; }
-    [XmlElement("ADDR1")]                        public required OfxAddressType ADDR1 { get; set; }
-    [XmlElement("ADDR2")]                        public required OfxAddressType ADDR2 { get; set; }
+    [XmlElement("ADDR1")]                        public OfxAddressType? ADDR1 { get; set; }
+    [XmlElement("ADDR2")]                        public OfxAddressType? ADDR2 { get; set; }
     [XmlElement("ADDR3")]                        public OfxAddressType? ADDR3 { get; set; }
     [XmlElement("CITY")]                         public required OfxAddressType CITY { get; set; }
     [XmlElement("STATE")]                        public required OfxStateType STATE { get; set; }

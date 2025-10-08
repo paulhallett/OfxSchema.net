@@ -51,9 +51,9 @@ public record OfxInvestmentBuy : OfxAbstractInvestmentTransaction
     [XmlElement("ORIGCURRENCY")]                 public OfxCurrency? ORIGCURRENCY { get; set; }
     [XmlElement("SUBACCTSEC")]                   public required OfxSubAccountEnum SUBACCTSEC { get; set; }
     [XmlElement("SUBACCTFUND")]                  public required OfxSubAccountEnum SUBACCTFUND { get; set; }
-    [XmlElement("LOANID")]                       public required OfxLoanIdType LOANID { get; set; }
-    [XmlElement("LOANPRINCIPAL")]                public required OfxAmountType LOANPRINCIPAL { get; set; }
-    [XmlElement("LOANINTEREST")]                 public required OfxAmountType LOANINTEREST { get; set; }
+    [XmlElement("LOANID")]                       public OfxLoanIdType? LOANID { get; set; }
+    [XmlElement("LOANPRINCIPAL")]                public OfxAmountType? LOANPRINCIPAL { get; set; }
+    [XmlElement("LOANINTEREST")]                 public OfxAmountType? LOANINTEREST { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
     [XmlElement("DTPAYROLL")]                    public OfxDateTimeType? DTPAYROLL { get; set; }
     [XmlElement("PRIORYEARCONTRIB")]             public OfxBooleanType? PRIORYEARCONTRIB { get; set; }

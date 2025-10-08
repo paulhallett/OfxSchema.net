@@ -71,5 +71,6 @@ public record OfxStatementTransaction
     [XmlElement("ORIGCURRENCY")]                 public OfxCurrency? ORIGCURRENCY { get; set; }
     [XmlElement("INV401KSOURCE")]                public OfxInvestment401kSourceEnum? INV401KSOURCE { get; set; }
     
+    public virtual bool ShouldSerializeCORRECTACTION() => CORRECTACTION.HasValue;
     public virtual bool ShouldSerializeINV401KSOURCE() => INV401KSOURCE.HasValue;
 }
