@@ -26,4 +26,6 @@ public record OfxRateType : OfxDecimalType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField.ToString("N2");
 }

@@ -26,4 +26,6 @@ public record OfxStandardIndustryCodeType : OfxIntegerType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField.ToString();
 }

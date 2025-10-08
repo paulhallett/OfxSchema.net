@@ -24,4 +24,6 @@ public record OfxSecurityUserIdType : OfxStringType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField;
 }

@@ -21,4 +21,6 @@ public record OfxQuantityType : OfxDecimalType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField.ToString("N2");
 }

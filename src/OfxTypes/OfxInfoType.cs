@@ -24,4 +24,6 @@ public record OfxInfoType : OfxStringType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField;
 }

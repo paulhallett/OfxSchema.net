@@ -24,4 +24,6 @@ public record OfxLoanIdType : OfxStringType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField;
 }

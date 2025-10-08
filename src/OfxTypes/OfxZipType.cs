@@ -24,4 +24,6 @@ public record OfxZipType : OfxStringType
     {
         _backingField = value;
     }
+    
+    public override string ToString() => _backingField;
 }
