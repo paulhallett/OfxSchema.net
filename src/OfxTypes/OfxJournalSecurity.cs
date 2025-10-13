@@ -1,0 +1,28 @@
+// ReSharper disable InconsistentNaming
+
+namespace OfxSchema;
+
+public record OfxJournalSecurity : OfxAbstractInvestmentTransaction
+{
+    // <xsd:complexType name="JournalSecurity">
+    //     <xsd:annotation>
+    //         <xsd:documentation>
+    //               The OFX element "JRNLSEC" is of type "JournalSecurity"
+    //         </xsd:documentation>
+    //     </xsd:annotation>
+    //     <xsd:complexContent>
+    //         <xsd:extension base="ofx:AbstractInvestmentTransaction" />
+    //             <xsd:sequence>
+    //                 <xsd:element name="SECID" type="ofx:SecurityId" />
+    //                 <xsd:element name="SUBACCTTO" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="SUBACCTFROM" type="ofx:SubAccountEnum" />
+    //                 <xsd:element name="UNITS" type="ofx:QuantityType" />
+    //             </xsd:sequence>
+    //     </xsd:complexContent>
+    // </xsd:complexType>
+    
+    [XmlElement("SECID")]                        public required OfxSecurityId SECID { get; set; }
+    [XmlElement("SUBACCTTO")]                    public required OfxSubAccountEnum SUBACCTTO { get; set; }
+    [XmlElement("SUBACCTFROM")]                  public required OfxSubAccountEnum SUBACCTFROM { get; set; }
+    [XmlElement("UNITS")]                        public required OfxQuantityType UNITS { get; set; }
+}
